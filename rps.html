@@ -1,0 +1,89 @@
+<HTML>
+<HEAD>
+<TITLE>Rock, Paper, Scissors: created by:</TITLE>
+</HEAD>
+<BODY BGCOLOR=GOLD>
+<FONT COLOR="BLUE">
+<FONT ALIGN="LEFT">
+
+<h1>
+<hr>
+<hr>
+
+<SCRIPT LANGUAGE= JAVASCRIPT TYPE="TEXT/JAVASCRIPT">
+document.write("Hello ")
+var name = prompt("What is your name?")
+document.write(name);
+document.write("!<br>");
+var userChoice = prompt("Do you choose rock, paper or scissors?");
+var computerChoice = Math.random();
+if (computerChoice < 0.34) {
+	computerChoice = "rock";
+} else if(computerChoice <= 0.67) {
+	computerChoice = "paper";
+} else {
+	computerChoice = "scissors";
+} 
+document.write("Computer: " + computerChoice +"<br>");
+
+var compare = function (choice1, choice2) {
+if (choice1 === choice2) {
+    document.write("The result is a tie!");
+} else if (choice1 === "rock") {
+    if (choice2 === "scissors") {
+        document.write("rockwins");
+    } else {
+        document.write("paper wins");
+    }
+} else if (choice1 === "paper") {
+    if (choice2 === "rock") {
+        document.write("paper wins");
+    } else {
+        document.write("scissors wins");
+    }
+} else if (choice1 === "scissos") {
+    if (choice2 === "paper") {
+        document.write("scissors wins");
+		choiceScore1.setScore(1);
+    } else {
+        document.write("rock wins");
+    }
+} else if (choice1 === "rope") {
+    document.write("rope wins");
+} else { 
+    document.write("Invalid Argument");
+}
+};
+compare(userChoice, computerChoice)
+var feedback = prompt("Rate my game on a scale 1-10.");
+if (feedback > 8) {
+   document.write("<br> Thank you!");
+}
+else
+{
+    document.write("<br> I'll try harder.");
+};
+document.write("<br>");
+document.write(name);
+document.write(" rated the game ");
+document.write(feedback);
+var replay = prompt("Would you like to restart the game?");
+switch (replay) {
+case 'yes':
+	location.reload();
+break;
+case 'no':
+	document.write("<br> Ok, maybe next time.");
+break;
+default:
+document.write("<br> Ok, maybe next time.");
+}
+</SCRIPT>
+
+
+<hr>
+<hr>
+
+</h1>
+</BODY>
+</HTML>

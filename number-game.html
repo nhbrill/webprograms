@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<table border="1" style="width100%; background-color:gold;">
+<tr>
+	<td colspan="2"><h1 style="text-align:center;">Guess 0-9</h1></td>
+</tr>
+<tr>
+	<td colspan="2">NUMBER=<input id="guess" value="0"></td>
+</tr>
+<tr>
+	<td>SOLUTION=</td>
+	<td><p id="solution"></p></td>
+</tr>
+<tr>
+	<td>ANSWER=</td>
+	<td><p id="enter"></p></td>
+</tr>
+<tr>
+	<td colspan="2"><button style="height: 50px; width: 50px;" 	onclick="meFunction()">E</button></td>
+</tr>
+</table>
+<script>
+function meFunction() {
+    var number, answer;
+    var x = Math.floor((Math.random() * 10) + 0);
+    document.getElementById("solution").innerHTML = x;
+    number = Number(document.getElementById("guess").value);
+    if (isNaN(number)) { 
+        answer = "error";
+    } else {
+        answer= (number == x) ? "correct": "try again";
+    }
+    document.getElementById("enter").innerHTML = answer;
+}
+</script>
+<body>
+</html>
