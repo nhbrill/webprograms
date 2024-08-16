@@ -1,0 +1,80 @@
+<HTML>
+
+<table border="1" style="width:10%; background-color: #D3D3D3;">
+	<tr>
+		<td Colspan="2">
+				<img src="Capturebmcp.jpg" 							style="width:250px;height:25px;">
+		</td>
+	</tr>
+	<tr>
+		<td>Monday<td>
+		<input id="M" value="0">
+	</tr>
+	<tr>
+		<td>Tuesday<td>
+		<input id="T1" value="0">
+	</tr>
+	<tr>
+		<td>Wednesday<td>
+		<input id="W" value="0">
+	</tr>
+	<tr>
+		<td>Thursday<td>
+		<input id="T2" value="0">
+	</tr>
+	<tr>
+		<td>Friday<td>
+		<input id="F" value="0">
+	</tr>
+	<tr>
+		<td>Total Miles</td>
+		<td><p id="total"></td>
+	</tr>
+	<tr>
+		<td>Daily Average</td>
+		<td><p id="average"></td>
+	</tr>
+	<tr>
+		<td><button onclick="cFunction()">Restart</button></td>
+		<td><button onclick="aFunction(), bFunction()">Calculate</button></td>
+	</tr>
+</table>
+
+<script>
+function aFunction() {
+	var A, B, C, D, E, answer;
+	var A = Number(document.getElementById("M").value);
+	var B = Number(document.getElementById("T1").value);
+	var C = Number(document.getElementById("W").value);
+	var D = Number(document.getElementById("T2").value);
+	var E = Number(document.getElementById("F").value);		answer = A + B + C + D + E;
+	document.getElementById("total").innerHTML = answer;
+}
+function bFunction() {
+	var A, B, C, D, E, answer;
+	var A = Number(document.getElementById("M").value);
+	var B = Number(document.getElementById("T1").value);
+	var C = Number(document.getElementById("W").value);
+	var D = Number(document.getElementById("T2").value);
+	var E = Number(document.getElementById("F").value);		answer = (A + B + C + D + E) / 5;
+	document.getElementById("average").innerHTML = answer;
+}
+function cFunction() {
+	var A, B, C, D, E, answer;
+	var A = Number(document.getElementById("M").value);
+	var B = Number(document.getElementById("T1").value);
+	var C = Number(document.getElementById("W").value);
+	var D = Number(document.getElementById("T2").value);
+	var E = Number(document.getElementById("F").value);
+	answer = 0;		
+	document.getElementById("M").value = answer;
+	document.getElementById("T1").value = answer;
+	document.getElementById("W").value = answer;
+	document.getElementById("T2").value = answer;
+	document.getElementById("F").value = answer;
+	document.getElementById("average").innerHTML = answer;
+	document.getElementById("total").innerHTML = answer;
+}
+</script>
+
+</HTML>
