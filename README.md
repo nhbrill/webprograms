@@ -20,7 +20,7 @@ Open in web browser.
 A game where the user plays rock paper scissors with a computer.
 
 <b>Url Converter</b><br>
-```urlcon.html``` Convertes any file to a data url that can be searched form any browser.
+```urlcon.html``` Convertes any file to a data url that can be searched from any browser.
 
 <b>Buisness Mileage Calculator</b><br>
 ```BMCP.html``` A calculator for determining the average and total miles driven in a week.
