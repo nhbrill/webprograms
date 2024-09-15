@@ -1,0 +1,32 @@
+<!-- Nate Brill -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Calculator</title>
+</head>
+<body>
+<h4>Calculator</h4>
+X<input id="x"><br>
+Y<input id="y"><br>
+<button id="ClickButton">Show results</button>
+<div id="toBeChanged"></div>
+<script>
+var ClickButton = document.getElementById("ClickButton");
+ClickButton.addEventListener('click', showResults);
+
+function showResults() {
+	var x = Number(document.getElementById('x').value);
+	var y = Number(document.getElementById('y').value);
+	var container = document.getElementById('toBeChanged');
+	var values = "<br>" + x + " + " + y + " = " + (x + y) +
+				 "<br>" + x + " - " + y + " = " + (x - y) +
+				 "<br>" + x + " * " + y + " = " + (x * y) +
+				 "<br>" + x + " / " + y + " = " + (x / y) +
+				 "<br>" + x + " % " + y + " = " + (x % y);
+	container.innerHTML =  values;
+}
+
+</script>
+</body>
+</html>
